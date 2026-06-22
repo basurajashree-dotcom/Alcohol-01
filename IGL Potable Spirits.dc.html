@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#282E75}
+  ::selection{background:#50130f;color:#e4dcce}
+  @keyframes glowPulse{0%,100%{box-shadow:0 0 0 0 rgba(185,152,95,0.0)}50%{box-shadow:0 0 26px 2px rgba(185,152,95,0.35)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+</style>
+<script src="image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif;color:#e4dcce;background:#282E75;overflow-x:clip;position:relative">
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="Hero" style="position:relative;height:100vh;min-height:680px;overflow:hidden;background:#1c2052">
+
+    <!-- carousel slides -->
+    <div style="position:absolute;inset:0;opacity:{{ op0 }};transition:opacity 1.6s ease">
+      <video src="assets/hero-1.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
+    </div>
+    <div style="position:absolute;inset:0;opacity:{{ op1 }};transition:opacity 1.6s ease">
+      <img src="assets/hero-2.jpg" alt="Whisky bottle carried through a barley field" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+    </div>
+    <div style="position:absolute;inset:0;opacity:{{ op2 }};transition:opacity 1.6s ease">
+      <img src="assets/hero-3.jpg" alt="Riders on horseback in a lit arena" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+    </div>
+
+    <!-- scrim -->
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,32,82,0.92) 0%,rgba(28,32,82,0.7) 36%,rgba(28,32,82,0.32) 70%,rgba(28,32,82,0.55) 100%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,32,82,0.45) 0%,transparent 26%,transparent 72%,rgba(28,32,82,0.7) 100%)"></div>
+
+    <!-- nav -->
+    <nav style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:26px 56px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:34px;height:34px;border:1px solid rgba(228,220,206,0.55);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:18px;color:#e4dcce">IG</div>
+        <div style="line-height:1.1">
+          <div style="font-family:'Fraunces',serif;font-size:17px;letter-spacing:0.02em;color:#e4dcce">India Glycols</div>
+          <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(228,220,206,0.6)">Potable Spirits</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:34px">
+        <a href="#" style="font-size:13px;letter-spacing:0.04em;color:rgba(228,220,206,0.82);text-decoration:none">Investors</a>
+        <a href="#" style="font-size:13px;letter-spacing:0.04em;color:rgba(228,220,206,0.82);text-decoration:none">Portfolio</a>
+        <a href="#" style="font-size:13px;letter-spacing:0.04em;color:rgba(228,220,206,0.82);text-decoration:none">Manufacturing</a>
+        <a href="#" style="font-size:13px;letter-spacing:0.04em;color:rgba(228,220,206,0.82);text-decoration:none">Sustainability</a>
+        <a href="#" style="font-size:13px;letter-spacing:0.04em;color:rgba(228,220,206,0.82);text-decoration:none">Governance</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <a href="#" style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#282E75;background:#b9985f;padding:11px 18px;text-decoration:none;white-space:nowrap;font-size:12px">Investor Relations</a>
+      </div>
+    </nav>
+
+    <!-- hero copy -->
+    <div style="position:absolute;inset:0;z-index:15;display:flex;align-items:center">
+      <div style="width:100%;max-width:1320px;margin:0 auto;padding:0 56px">
+        <div style="max-width:42ch">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px;animation:fadeUp 0.9s ease both">
+            <span style="width:30px;height:1px;background:#b9985f"></span>
+            <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(228,220,206,0.78)">ISL's Zumba Black · Aged Rum</span>
+          </div>
+          <h1 style="font-family:'Fraunces',serif;font-weight:500;font-size:84px;line-height:0.98;letter-spacing:-0.01em;color:#f3eee4;margin-bottom:24px;animation:fadeUp 0.9s ease 0.12s both">Where smooth meets sophistication</h1>
+          <p style="font-size:16px;line-height:1.6;color:rgba(228,220,206,0.82);max-width:46ch;margin-bottom:34px;animation:fadeUp 0.9s ease 0.24s both">A premium spirits portfolio built on India's leading specialty-chemicals and bio-based manufacturing heritage.</p>
+          <div style="display:flex;gap:14px;animation:fadeUp 0.9s ease 0.36s both">
+            <a href="#" style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#282E75;background:#b9985f;padding:15px 26px;text-decoration:none;animation:glowPulse 4.5s ease-in-out infinite">Investor Relations</a>
+            <a href="#" style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#e4dcce;border:1px solid rgba(228,220,206,0.5);padding:15px 26px;text-decoration:none">Explore the Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- dots -->
+    <div style="position:absolute;left:56px;bottom:48px;z-index:16;display:flex;gap:9px;align-items:center">
+      <sc-for list="{{ dots }}" as="d" hint-placeholder-count="3">
+        <button onClick="{{ d.go }}" style="width:{{ d.w }};height:7px;border-radius:4px;border:none;cursor:pointer;padding:0;background:{{ d.bg }};transition:all 0.5s ease"></button>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- bottle: straddles the hero / snapshot seam, above both sections -->
+  <img id="heroBottle" src="assets/bottle.png" alt="ISL's Zumba Black Rum" style="position:absolute;right:9%;top:22vh;height:94vh;z-index:30;pointer-events:none;filter:drop-shadow(0 34px 64px rgba(0,0,0,0.6));will-change:transform;animation:fadeUp 1.2s ease 0.3s both">
+
+  <!-- ============ STRATEGIC FOUNDATIONS ============ -->
+  <section data-screen-label="Strategy" style="background:#e4dcce;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:760px">
+    <div style="position:relative;overflow:hidden">
+      <img src="assets/craftsman.jpg" alt="Master distiller inspecting spirit" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;filter:grayscale(1) contrast(1.05);-webkit-mask-image:linear-gradient(90deg,#000 42%,transparent 99%);mask-image:linear-gradient(90deg,#000 42%,transparent 99%)">
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 34%,rgba(228,220,206,0.5) 80%,#e4dcce 100%)"></div>
+      <div style="position:absolute;left:40px;bottom:36px;display:flex;align-items:center;gap:12px">
+        <span style="width:26px;height:1px;background:#b9985f"></span>
+        <span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(40,46,117,0.6)">Master distiller \u00b7 grain to glass</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;padding:104px 88px 104px 80px;max-width:760px">
+      <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#50130f;margin-bottom:18px">Strategic Foundations</div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:50px;line-height:1.04;color:#282E75;max-width:16ch;margin-bottom:24px">Strategic foundations of our strength</h2>
+      <p style="font-size:16px;line-height:1.75;color:rgba(40,46,117,0.74);max-width:48ch;margin-bottom:38px">Every expression begins with command of the craft. Backward integration into in-house distillation, end-to-end operating control from grain to glass, and export-grade compliance across every facility give the division a foundation few new entrants can match — and one our investors can underwrite with confidence.</p>
+      <div style="display:flex;flex-direction:column;gap:0;margin-bottom:42px">
+        <sc-for list="{{ advantages }}" as="a" hint-placeholder-count="3">
+          <div style="display:flex;gap:20px;padding:20px 0;border-top:1px solid rgba(40,46,117,0.16)">
+            <span style="font-family:'Fraunces',serif;font-size:22px;color:#b9985f;line-height:1.2;min-width:24px">{{ a.num }}</span>
+            <div>
+              <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:22px;line-height:1.2;color:#282E75;margin-bottom:5px">{{ a.title }}</h3>
+              <p style="font-size:13px;line-height:1.6;color:rgba(40,46,117,0.66);max-width:44ch">{{ a.body }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="#" style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#e4dcce;background:#50130f;padding:15px 26px;text-decoration:none">Explore Our Craft</a>
+        <a href="#" style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#282E75;border:1px solid rgba(40,46,117,0.4);padding:15px 26px;text-decoration:none">View Manufacturing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVESTMENT SNAPSHOT ============ -->
+  <section data-screen-label="Snapshot" style="background:#282E75;padding:120px 56px">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:0.85fr 1.15fr;gap:80px;align-items:start">
+      <div>
+        <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#b9985f;margin-bottom:24px">By the Numbers</div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:46px;line-height:1.05;color:#f3eee4;margin-bottom:22px">Investment snapshot at a glance</h2>
+        <p style="font-size:15px;line-height:1.7;color:rgba(228,220,206,0.7);max-width:42ch">A disciplined entry into premium potable spirits, underwritten by decades of industrial scale, distribution depth and balance-sheet strength.</p>
+        <p style="font-size:11px;letter-spacing:0.04em;color:rgba(228,220,206,0.4);margin-top:30px">Figures indicative, FY 2025 · IGL Annual Report</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(185,152,95,0.35);border-left:1px solid rgba(185,152,95,0.35)">
+        <sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+          <div style="border-bottom:1px solid rgba(185,152,95,0.35);border-right:1px solid rgba(185,152,95,0.35);padding:38px 34px">
+            <div style="font-family:'Fraunces',serif;font-size:58px;line-height:1;color:#b9985f;margin-bottom:14px">{{ m.value }}</div>
+            <div style="font-size:13px;letter-spacing:0.02em;color:#e4dcce;margin-bottom:5px">{{ m.label }}</div>
+            <div style="font-size:12px;line-height:1.5;color:rgba(228,220,206,0.55)">{{ m.sub }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT RANGE CAROUSEL ============ -->
+  <section id="rangeSection" data-screen-label="Range" style="background:#e4dcce;position:relative;min-height:230vh">
+    <div id="rangeSticky" style="position:sticky;top:0;height:100vh;overflow:hidden">
+
+      <div id="rangeBig" style="position:absolute;top:46%;left:50%;transform:translate(-50%,-50%);font-family:'Fraunces',serif;font-weight:600;font-size:200px;line-height:0.9;letter-spacing:0.03em;color:rgba(80,19,15,0.13);white-space:nowrap;pointer-events:none;user-select:none">AGED RUM</div>
+
+      <div id="rangeHead" style="position:absolute;top:7vh;left:0;right:0;text-align:center;opacity:0;padding:0 56px;pointer-events:none">
+        <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:16px">
+          <span style="width:26px;height:1px;background:#b9985f"></span>
+          <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#50130f">The Range</span>
+          <span style="width:26px;height:1px;background:#b9985f"></span>
+        </div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:56px;line-height:1.02;color:#282E75;margin-bottom:12px">A portfolio built to expand</h2>
+        <p style="font-size:15px;line-height:1.7;color:rgba(40,46,117,0.65);max-width:52ch;margin:0 auto">One flagship in market today, a defined pipeline across premium categories to follow.</p>
+      </div>
+
+      <img id="rangeBottle" src="assets/bottle.png" alt="Zumba Black Aged Rum" style="position:absolute;left:0;top:0;height:70vh;width:auto;object-fit:contain;transform-origin:center center;will-change:transform;filter:drop-shadow(0 32px 52px rgba(0,0,0,0.45))">
+
+      <div id="rangeAux" style="position:absolute;left:0;right:0;bottom:6vh;opacity:0;padding:0 56px">
+        <button onClick="{{ prev }}" aria-label="Previous" style="position:absolute;left:40px;top:38%;transform:translateY(-50%);z-index:5;width:54px;height:54px;border-radius:50%;border:1px solid rgba(40,46,117,0.35);background:transparent;color:#282E75;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.25s ease" style-hover="border-color:#50130f;color:#50130f;background:rgba(80,19,15,0.06)">&larr;</button>
+        <button onClick="{{ next }}" aria-label="Next" style="position:absolute;right:40px;top:38%;transform:translateY(-50%);z-index:5;width:54px;height:54px;border-radius:50%;border:1px solid rgba(40,46,117,0.35);background:transparent;color:#282E75;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.25s ease" style-hover="border-color:#50130f;color:#50130f;background:rgba(80,19,15,0.06)">&rarr;</button>
+        <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:end">
+          <sc-for list="{{ cards }}" as="c" hint-placeholder-count="5">
+            <div style="display:flex;flex-direction:column;align-items:center">
+              <div id="{{ c.slotId }}" style="height:300px;display:flex;align-items:flex-end;justify-content:center;position:relative">
+                <div style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:{{ c.shadowW }};height:22px;background:radial-gradient(ellipse at center,{{ c.shadow }} 0%,transparent 70%)"></div>
+                <img src="assets/bottle.png" alt="{{ c.name }}" style="height:208px;width:auto;object-fit:contain;filter:{{ c.filter }};opacity:{{ c.op }};transition:opacity 0.5s ease,filter 0.5s ease">
+              </div>
+              <div style="text-align:center;margin-top:20px;padding-top:18px;border-top:1px solid {{ c.rule }};width:100%;transition:border-color 0.5s ease">
+                <div style="font-family:'Fraunces',serif;font-weight:500;font-size:19px;color:{{ c.nameColor }};margin-bottom:5px;transition:color 0.5s ease">{{ c.name }}</div>
+                <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:{{ c.subColor }};transition:color 0.5s ease">{{ c.sub }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section data-screen-label="Portfolio" style="background:#1e1e1e;padding:130px 56px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:74px">
+        <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#b9985f;margin-bottom:18px">The Portfolio</div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:52px;line-height:1.04;color:#f3eee4;max-width:20ch;margin:0 auto 18px">Premium spirits crafted for distinction</h2>
+        <p style="font-size:15px;line-height:1.7;color:rgba(228,220,206,0.65);max-width:56ch;margin:0 auto">Three flagship expressions that carry the division's brand voice — restrained, considered and built for the premiumisation curve.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start">
+        <div style="position:sticky;top:64px;aspect-ratio:3/4;background:#2b2727;overflow:hidden;border:1px solid rgba(228,220,206,0.12)">
+          <img src="assets/prod-whisky.jpg" alt="Single Reserve Whisky" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ t0 }};transition:opacity 0.7s ease">
+          <img src="assets/prod-vodka.jpg" alt="Amazing Vodka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ t1 }};transition:opacity 0.7s ease">
+          <img src="assets/prod-whiskey.jpg" alt="Soulmate Whiskey" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ t2 }};transition:opacity 0.7s ease">
+          <div style="position:absolute;left:22px;bottom:20px;z-index:2;display:flex;align-items:center;gap:10px;pointer-events:none">
+            <span style="width:22px;height:1px;background:#b9985f"></span>
+            <span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(243,238,228,0.85)">{{ activeName }}</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="border-top:1px solid rgba(228,220,206,0.14)">
+            <sc-for list="{{ products }}" as="p" hint-placeholder-count="3">
+              <div style="border-bottom:1px solid rgba(228,220,206,0.14);background:{{ p.bg }};transition:background 0.4s ease">
+                <button onClick="{{ p.onSelect }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 26px;background:transparent;border:none;cursor:pointer;text-align:left">
+                  <div style="display:flex;align-items:baseline;gap:16px">
+                    <span style="font-family:'Fraunces',serif;font-size:15px;color:{{ p.numColor }};transition:color 0.4s ease">{{ p.idx }}</span>
+                    <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:30px;line-height:1;color:{{ p.nameColor }};transition:color 0.4s ease">{{ p.name }}</h3>
+                  </div>
+                  <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:{{ p.catColor }};transition:color 0.4s ease;white-space:nowrap">{{ p.category }}</span>
+                </button>
+                <div style="max-height:{{ p.maxH }};opacity:{{ p.bodyOp }};overflow:hidden;transition:max-height 0.55s ease,opacity 0.45s ease">
+                  <div style="padding:2px 26px 30px 57px">
+                    <div style="font-size:13px;letter-spacing:0.06em;color:rgba(228,220,206,0.72);margin-bottom:14px">{{ p.notes }}</div>
+                    <p style="font-family:'Fraunces',serif;font-style:italic;font-size:20px;line-height:1.4;color:#e4dcce;margin-bottom:20px;max-width:42ch">{{ p.positioning }}</p>
+                    <div style="font-size:12px;letter-spacing:0.02em;color:rgba(228,220,206,0.55);border-top:1px solid rgba(228,220,206,0.12);padding-top:16px">{{ p.market }}</div>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:36px">
+            <sc-for list="{{ process }}" as="s" hint-placeholder-count="3">
+              <div style="border-top:1px solid #b9985f;padding-top:16px">
+                <div style="font-family:'Fraunces',serif;font-size:22px;color:#b9985f;margin-bottom:8px">{{ s.num }}</div>
+                <div style="font-size:13px;color:#e4dcce;margin-bottom:6px">{{ s.title }}</div>
+                <div style="font-size:11px;line-height:1.5;color:rgba(228,220,206,0.5)">{{ s.body }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARKET ============ -->
+  <section data-screen-label="Market" style="background:#282E75;padding:130px 56px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:70px">
+        <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#b9985f;margin-bottom:18px">Market Opportunity</div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:52px;line-height:1.04;color:#f3eee4;max-width:18ch;margin:0 auto 18px">The spirits market is expanding</h2>
+        <p style="font-size:15px;line-height:1.7;color:rgba(228,220,206,0.65);max-width:56ch;margin:0 auto">Premiumisation is reshaping demand across India and key export corridors — a structural tailwind aligned to the division's positioning.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:70px;align-items:center">
+        <div style="width:100%;aspect-ratio:4/3">
+          <image-slot id="market-distillery" shape="rect" placeholder="Drop a distillery interior photo" style="display:block;width:100%;height:100%"></image-slot>
+        </div>
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:38px;line-height:1.1;color:#f3eee4;margin-bottom:20px">The global spirits market exceeds $600 billion annually</h3>
+          <p style="font-size:15px;line-height:1.7;color:rgba(228,220,206,0.72);max-width:48ch;margin-bottom:34px">India's premium and above segment is growing at double-digit rates, led by whisky and white spirits. The division is positioned to capture share where integrated manufacturing and distribution depth matter most.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;border-top:1px solid rgba(185,152,95,0.3);padding-top:28px">
+            <div><div style="font-family:'Fraunces',serif;font-size:40px;color:#b9985f;line-height:1">12%</div><div style="font-size:12px;color:rgba(228,220,206,0.6);margin-top:6px">Premium segment CAGR, India</div></div>
+            <div><div style="font-family:'Fraunces',serif;font-size:40px;color:#b9985f;line-height:1">2.8x</div><div style="font-size:12px;color:rgba(228,220,206,0.6);margin-top:6px">Premiumisation multiple by 2030</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUSTAINABILITY ============ -->
+  <section data-screen-label="Sustainability" style="background:#e4dcce;padding:120px 56px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:70px">
+        <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#50130f;margin-bottom:18px">ESG · Stewardship</div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:48px;line-height:1.05;color:#282E75;max-width:18ch;margin:0 auto 18px">Sustainability embedded in our operations</h2>
+        <p style="font-size:15px;line-height:1.7;color:rgba(40,46,117,0.65);max-width:56ch;margin:0 auto">Built on IGL's bio-based, green-chemistry heritage — sustainability is an operating principle, not a programme.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;align-items:start">
+        <div style="display:flex;flex-direction:column">
+          <div style="width:100%;aspect-ratio:3/4;overflow:hidden;background:#282E75">
+            <img src="assets/esg-1.jpg" alt="Environmental stewardship" style="display:block;width:100%;height:100%;object-fit:cover">
+          </div>
+          <div style="text-align:center;padding:28px 14px 0">
+            <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#50130f;margin-bottom:12px">Environmental stewardship</div>
+            <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.65;letter-spacing:0.02em;text-transform:uppercase;color:#282E75;max-width:30ch;margin:0 auto">Water reclamation, energy recovery and effluent management drawn from IGL&rsquo;s green-chemistry expertise.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="width:100%;aspect-ratio:3/4;overflow:hidden;background:#282E75">
+            <img src="assets/esg-2.jpg" alt="Community engagement" style="display:block;width:100%;height:100%;object-fit:cover">
+          </div>
+          <div style="text-align:center;padding:28px 14px 0">
+            <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#50130f;margin-bottom:12px">Community engagement</div>
+            <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.65;letter-spacing:0.02em;text-transform:uppercase;color:#282E75;max-width:30ch;margin:0 auto">Local sourcing and livelihood programmes that tie facility growth to regional prosperity.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="width:100%;aspect-ratio:3/4;overflow:hidden;background:#282E75">
+            <img src="assets/esg-3.jpg" alt="Responsible marketing" style="display:block;width:100%;height:100%;object-fit:cover">
+          </div>
+          <div style="text-align:center;padding:28px 14px 0">
+            <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#50130f;margin-bottom:12px">Responsible marketing</div>
+            <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.65;letter-spacing:0.02em;text-transform:uppercase;color:#282E75;max-width:30ch;margin:0 auto">Age-gated, restraint-led communication that upholds the standards of responsible consumption.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEADERSHIP ============ -->
+  <section data-screen-label="Leadership" style="background:#282E75;padding:130px 56px 0">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-bottom:90px">
+      <div>
+        <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#b9985f;margin-bottom:18px">Governance</div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:48px;line-height:1.05;color:#f3eee4;max-width:16ch;margin-bottom:22px">Experienced stewards of long-term value</h2>
+        <a href="#" style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#282E75;background:#b9985f;padding:14px 24px;text-decoration:none;display:inline-block">View Governance Framework</a>
+      </div>
+      <p style="font-size:16px;line-height:1.8;color:rgba(228,220,206,0.74)">The division is overseen by a leadership team with deep tenure across spirits, manufacturing and capital markets — accountable to a board governance framework aligned with the standards expected of a listed enterprise. Visible accountability underpins every commitment we make to stakeholders.</p>
+    </div>
+    <div style="aspect-ratio:21/8;overflow:hidden;background:#1c2052;max-width:1320px;margin:0 auto">
+      <video src="assets/leadership.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
+    </div>
+  </section>
+
+  <!-- ============ ROADMAP ============ -->
+  <section data-screen-label="Roadmap" style="background:#282E75;padding:130px 56px">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:0.8fr 1.2fr;gap:80px;align-items:start">
+      <div style="position:sticky;top:80px">
+        <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#b9985f;margin-bottom:18px">Roadmap</div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:46px;line-height:1.05;color:#f3eee4;max-width:14ch;margin-bottom:20px">Our path forward spans years of growth</h2>
+        <p style="font-size:15px;line-height:1.7;color:rgba(228,220,206,0.68);max-width:38ch">A phased plan tying capacity, portfolio and export expansion to disciplined capital deployment.</p>
+      </div>
+      <div id="roadTimeline" style="position:relative;padding-left:0">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:1px;background:rgba(185,152,95,0.18)"></div>
+        <div id="roadLine" style="position:absolute;left:-0.5px;top:0;width:2px;height:0px;background:linear-gradient(to bottom,rgba(185,152,95,0.3),#d8b66a);box-shadow:0 0 12px rgba(185,152,95,0.55);will-change:height"></div>
+        <sc-for list="{{ roadmap }}" as="r" hint-placeholder-count="4">
+          <div style="position:relative;padding:0 0 56px 44px">
+            <span data-road-dot="true" style="position:absolute;left:-5px;top:6px;width:11px;height:11px;border-radius:50%;background:#282E75;border:1px solid rgba(185,152,95,0.45);box-sizing:border-box;transition:background 0.4s ease,box-shadow 0.4s ease,border-color 0.4s ease"></span>
+            <div style="font-family:'Fraunces',serif;font-size:34px;color:#b9985f;margin-bottom:14px">{{ r.year }}</div>
+            <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:26px;color:#f3eee4;margin-bottom:10px">{{ r.title }}</h3>
+            <p style="font-size:14px;line-height:1.7;color:rgba(228,220,206,0.68);max-width:48ch">{{ r.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section data-screen-label="CTA" style="background:#281309;padding:120px 56px;text-align:center">
+    <div style="max-width:680px;margin:0 auto">
+      <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:50px;line-height:1.06;color:#f3eee4;margin-bottom:20px">Connect with our investor relations team</h2>
+      <p style="font-size:15px;line-height:1.7;color:rgba(243,238,228,0.78);margin-bottom:36px">Access the annual report, latest filings and direct contact with the division's investor relations desk.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="#" style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#50130f;background:#b9985f;padding:15px 28px;text-decoration:none">Contact Investor Relations</a>
+        <a href="#" style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#f3eee4;border:1px solid rgba(243,238,228,0.45);padding:15px 28px;text-decoration:none">Download Annual Report</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#1c2052;padding:72px 56px 40px">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:54px;border-bottom:1px solid rgba(228,220,206,0.12)">
+      <div>
+        <div style="font-family:'Fraunces',serif;font-size:22px;color:#e4dcce;margin-bottom:10px">India Glycols — Potable Spirits</div>
+        <p style="font-size:13px;line-height:1.7;color:rgba(228,220,206,0.5);max-width:36ch">Where smooth meets sophistication. A premium spirits portfolio built on industrial heritage.</p>
+      </div>
+      <sc-for list="{{ footer }}" as="col" hint-placeholder-count="3">
+        <div>
+          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#b9985f;margin-bottom:18px">{{ col.title }}</div>
+          <sc-for list="{{ col.links }}" as="l" hint-placeholder-count="4">
+            <a href="#" style="display:block;font-size:13px;color:rgba(228,220,206,0.7);text-decoration:none;margin-bottom:11px">{{ l }}</a>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+    <div style="max-width:1320px;margin:0 auto;padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <span style="font-size:11px;color:rgba(228,220,206,0.4)">© 2026 India Glycols Limited. All rights reserved.</span>
+      <span style="font-size:11px;color:rgba(228,220,206,0.4);max-width:60ch;text-align:right">For informational purposes only. Not an offer or solicitation. Consume responsibly · 21+.</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;820px&quot;},&quot;carouselSeconds&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:6.5,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:3,&quot;max&quot;:12,&quot;step&quot;:0.5}}">
+class Component extends DCLogic {
+  state = { slide: 0, active: 2, tab: 0 };
+
+  componentDidMount() {
+    const secs = (this.props.carouselSeconds ?? 6.5) * 1000;
+    this.timer = setInterval(() => {
+      this.setState(s => ({ slide: (s.slide + 1) % 3 }));
+    }, secs);
+    this.setupBottle();
+    this.setupReveals();
+  }
+
+  setupReveals() {
+    const heads = Array.prototype.slice.call(document.querySelectorAll('section h1, section h2'))
+      .filter(h => !h.closest('[data-screen-label="Hero"]') && !h.closest('[data-screen-label="Range"]'));
+    heads.forEach(h => {
+      h.style.opacity = '0';
+      h.style.transform = 'translateY(30px)';
+      h.style.transition = 'opacity 1.2s cubic-bezier(.2,.7,.2,1), transform 1.2s cubic-bezier(.2,.7,.2,1)';
+    });
+    const reveal = (h) => { h.style.opacity = '1'; h.style.transform = 'none'; h.__shown = true; };
+    let pending = heads.slice();
+    const check = () => {
+      const vh = window.innerHeight;
+      pending = pending.filter(h => {
+        const top = h.getBoundingClientRect().top;
+        if (top < vh * 0.9) { reveal(h); return false; }
+        return true;
+      });
+      if (!pending.length && this._revealScroll) {
+        window.removeEventListener('scroll', this._revealScroll);
+        this._revealScroll = null;
+      }
+    };
+    this._revealScroll = check;
+    window.addEventListener('scroll', check, { passive: true });
+    // immediate pass for anything already in view on load
+    check();
+    // safety: never leave a heading hidden
+    this._revealTimer = setTimeout(() => heads.forEach(h => { if (!h.__shown) reveal(h); }), 3500);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    if (this.onScroll) window.removeEventListener('scroll', this.onScroll);
+    if (this._revealScroll) window.removeEventListener('scroll', this._revealScroll);
+    if (this._revealTimer) clearTimeout(this._revealTimer);
+  }
+
+  componentDidMount2() {}
+  // scroll-driven bottle drift
+  setupBottle() {
+    this.onScroll = () => {
+      if (this._raf) return;
+      this._raf = requestAnimationFrame(() => {
+        this._raf = null;
+        const y = window.scrollY || window.pageYOffset || 0;
+        const vh = window.innerHeight;
+        const el = document.getElementById('heroBottle');
+        if (el) el.style.transform = 'translateY(' + (y * 0.22) + 'px) scale(' + (1 + Math.min(y, 600) * 0.00018) + ')';
+
+        const sec = document.getElementById('rangeSection');
+        const stick = document.getElementById('rangeSticky');
+        const rb = document.getElementById('rangeBottle');
+        const slot = document.getElementById('rangeSlot');
+        if (sec && stick && rb && slot) {
+          const total = sec.offsetHeight - vh;
+          const scrolled = -sec.getBoundingClientRect().top;
+          const p = Math.max(0, Math.min(1, scrolled / total));
+          const sr = stick.getBoundingClientRect();
+          const slr = slot.getBoundingClientRect();
+          const targetCx = slr.left + slr.width / 2 - sr.left;
+          const targetCy = slr.top + slr.height / 2 - sr.top;
+          const restCx = sr.width / 2;
+          const restCy = sr.height * 0.46;
+          const fallRaw = Math.max(0, Math.min(1, (p - 0.26) / 0.46));
+          const fall = 1 - Math.pow(1 - fallRaw, 3);
+          // vertical drop leads; horizontal slide lags so it falls straight then settles across
+          const vRaw = Math.max(0, Math.min(1, fallRaw / 0.6));
+          const vDrop = 1 - Math.pow(1 - vRaw, 3);
+          const hRaw = Math.max(0, Math.min(1, (fallRaw - 0.4) / 0.6));
+          const hMove = 1 - Math.pow(1 - hRaw, 3);
+          const turnRaw = Math.max(0, Math.min(1, (p - 0.14) / 0.16));
+          const rot = (-7 * turnRaw) * (1 - vDrop);
+          const baseH = rb.offsetHeight || (0.7 * vh);
+          const endScale = (slr.height * 0.96) / baseH;
+          const sc = 1 + (endScale - 1) * fall;
+          const cx = restCx + (targetCx - restCx) * hMove;
+          const cy = restCy + (targetCy - restCy) * vDrop;
+          rb.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%,-50%) rotate(' + rot + 'deg) scale(' + sc + ')';
+          const big = document.getElementById('rangeBig');
+          const head = document.getElementById('rangeHead');
+          const aux = document.getElementById('rangeAux');
+          if (big) big.style.opacity = String(1 - Math.max(0, Math.min(1, (p - 0.16) / 0.2)));
+          if (head) head.style.opacity = String(Math.max(0, Math.min(1, (p - 0.30) / 0.2)));
+          if (aux) aux.style.opacity = String(Math.max(0, Math.min(1, (p - 0.24) / 0.22)));
+        }
+
+        const tl = document.getElementById('roadTimeline');
+        const line = document.getElementById('roadLine');
+        if (tl && line) {
+          const r = tl.getBoundingClientRect();
+          const trigger = vh * 0.55;
+          const prog = Math.max(0, Math.min(1, (trigger - r.top) / r.height));
+          const lineBottom = prog * r.height;
+          line.style.height = lineBottom + 'px';
+          const dots = tl.querySelectorAll('[data-road-dot]');
+          dots.forEach(d => {
+            const dTop = d.getBoundingClientRect().top - r.top + 5;
+            const on = dTop <= lineBottom + 2;
+            d.style.background = on ? '#b9985f' : '#282E75';
+            d.style.borderColor = on ? '#b9985f' : 'rgba(185,152,95,0.45)';
+            d.style.boxShadow = on ? '0 0 0 4px rgba(185,152,95,0.16), 0 0 14px rgba(185,152,95,0.7)' : 'none';
+          });
+        }
+      });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  go(k) {
+    this.setState({ slide: k });
+    const secs = (this.props.carouselSeconds ?? 6.5) * 1000;
+    clearInterval(this.timer);
+    this.timer = setInterval(() => {
+      this.setState(s => ({ slide: (s.slide + 1) % 3 }));
+    }, secs);
+  }
+
+  renderVals() {
+    const i = this.state.slide;
+    const dots = [0, 1, 2].map(k => ({
+      go: () => this.go(k),
+      bg: i === k ? '#e4dcce' : 'rgba(228,220,206,0.32)',
+      w: i === k ? '26px' : '7px',
+    }));
+
+    const metrics = [
+      { value: '₹450 Cr', label: 'Revenue contribution', sub: 'Potable spirits division, FY25' },
+      { value: '28%', label: 'Year-on-year growth', sub: 'Premium portfolio, YoY' },
+      { value: '15+', label: 'States & territories', sub: 'Active distribution footprint' },
+      { value: '3', label: 'Flagship brands', sub: 'Whisky & white spirits' },
+    ];
+
+    const advantages = [
+      { num: '01', title: 'Backward integration', body: 'In-house extra-neutral alcohol and grain spirit, anchored to IGL\u2019s chemicals business — quality and cost secured from the first stage.' },
+      { num: '02', title: 'Grain-to-glass control', body: 'Sourcing, distillation, maturation, blending and bottling held under one operating standard with full traceability at scale.' },
+      { num: '03', title: 'Regulatory excellence', body: 'ISO, FSSAI and export-grade compliance across every facility, de-risking expansion into new domestic and international corridors.' },
+    ];
+
+    const tab = this.state.tab;
+    const rawProducts = [
+      { name: 'Single Reserve Whisky', category: 'Whisky', notes: 'Honeyed oak · dried fig · gentle smoke', positioning: 'Patiently matured for the collector who measures time in seasons, not days.', market: 'Premium & above · India + select export markets' },
+      { name: 'Amazing Vodka', category: 'White Spirit', notes: 'Clean grain · soft mineral · citrus lift', positioning: 'Engineered purity, distilled to a clarity that defines the modern category.', market: 'Premium white spirits · urban on-trade' },
+      { name: 'Soulmate Whiskey', category: 'Whiskey', notes: 'Vanilla · toasted spice · long warm finish', positioning: 'An everyday luxury — approachable, considered, quietly confident.', market: 'Upper-mainstream · pan-India retail' },
+    ];
+    const products = rawProducts.map((p, k) => {
+      const on = k === tab;
+      return {
+        ...p,
+        idx: '0' + (k + 1),
+        onSelect: () => this.setState({ tab: k }),
+        bg: on ? '#232020' : 'transparent',
+        numColor: on ? '#b9985f' : 'rgba(185,152,95,0.5)',
+        nameColor: on ? '#f3eee4' : 'rgba(243,238,228,0.5)',
+        catColor: on ? '#b9985f' : 'rgba(228,220,206,0.35)',
+        maxH: on ? '360px' : '0px',
+        bodyOp: on ? 1 : 0,
+      };
+    });
+    const activeName = rawProducts[tab].name;
+
+    const process = [
+      { num: '01', title: 'Fermentation & distillation', body: 'Controlled fermentation and multi-column distillation for a consistent, clean spirit base.' },
+      { num: '02', title: 'Maturation & aging', body: 'Oak maturation under monitored conditions to develop depth and character.' },
+      { num: '03', title: 'Bottling & assurance', body: 'Automated bottling with batch-level quality assurance and traceability.' },
+    ];
+
+    const esg = [
+      { img: 'assets/esg-1.jpg', title: 'Environmental stewardship', body: 'Water reclamation, energy recovery and effluent management drawn from IGL\u2019s green-chemistry expertise.' },
+      { img: 'assets/esg-2.jpg', title: 'Community engagement', body: 'Local sourcing and livelihood programmes that tie facility growth to regional prosperity.' },
+      { img: 'assets/esg-3.jpg', title: 'Responsible marketing', body: 'Age-gated, restraint-led communication that upholds the standards of responsible consumption.' },
+    ];
+
+    const roadmap = [
+      { year: '2024', title: 'Capacity expansion begins', body: 'Phase-one distillation and bottling capacity commissioned to support premium portfolio demand.' },
+      { year: '2025', title: 'Export market entry', body: 'First international corridors opened across the Middle East and South-East Asia.' },
+      { year: '2026', title: 'Premium portfolio launch', body: 'Flagship whisky and white-spirit expressions scaled across priority domestic markets.' },
+      { year: '2027', title: 'Sustainability milestone', body: 'Water-neutral targets and circular-economy benchmarks achieved across core facilities.' },
+    ];
+
+    const cats = [
+      { name: 'Premium Whisky', sub: 'Pipeline · 2026' },
+      { name: 'Craft Vodka', sub: 'Pipeline · 2026' },
+      { name: 'Zumba Black', sub: 'In market · Aged Rum' },
+      { name: 'Reserve Whiskey', sub: 'Pipeline · 2027' },
+      { name: 'Small-Batch Gin', sub: 'Pipeline · 2027' },
+    ];
+    const active = this.state.active;
+    const cards = [0,1,2,3,4].map(pos => {
+      const cat = cats[(active - 2 + pos + cats.length) % cats.length];
+      const isC = pos === 2;
+      return {
+        name: cat.name, sub: cat.sub,
+        slotId: isC ? 'rangeSlot' : ('slot' + pos),
+        op: isC ? 0 : 0.4,
+        filter: isC ? 'none' : 'grayscale(1) contrast(1.02)',
+        shadow: isC ? 'rgba(40,46,117,0.28)' : 'rgba(40,46,117,0.18)',
+        shadowW: isC ? '66%' : '60%',
+        rule: isC ? '#b9985f' : 'rgba(40,46,117,0.16)',
+        nameColor: isC ? '#282E75' : 'rgba(40,46,117,0.55)',
+        subColor: isC ? '#50130f' : 'rgba(40,46,117,0.4)',
+      };
+    });
+    const prev = () => this.setState(s => ({ active: (s.active - 1 + cats.length) % cats.length }));
+    const next = () => this.setState(s => ({ active: (s.active + 1) % cats.length }));
+
+    const footer = [
+      { title: 'Investors', links: ['Investor Relations', 'Annual Report', 'BSE / NSE Filings', 'Subscribe to Updates'] },
+      { title: 'Company', links: ['About IGL', 'Portfolio', 'Manufacturing', 'Sustainability'] },
+      { title: 'Contact', links: ['IR Desk', 'Media Enquiries', 'Careers', 'Corporate Office'] },
+    ];
+
+    return {
+      op0: i === 0 ? 1 : 0, op1: i === 1 ? 1 : 0, op2: i === 2 ? 1 : 0,
+      dots, metrics, advantages, products, process, esg, roadmap, cards, prev, next, footer,
+      t0: tab === 0 ? 1 : 0, t1: tab === 1 ? 1 : 0, t2: tab === 2 ? 1 : 0, activeName,
+    };
+  }
+}
+</script>
+</body>
+</html>
